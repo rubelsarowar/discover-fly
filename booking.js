@@ -1,4 +1,6 @@
-function handleTicketPrice(increase){
+
+// first ticket Price function start here
+function firstTicketPrice(increase){
     const firstClassInput = document.getElementById("first-class-input");
     const firstInputNumber = parseInt(firstClassInput.value);
     let firstNewInput = firstInputNumber;
@@ -13,6 +15,11 @@ function handleTicketPrice(increase){
     document.getElementById("first-class-price").innerHTML = "$" + firstTotalPrice;
     calculateSubTotal()
 }
+
+// first ticket Price function end here
+
+
+// economy ticket Price function start here
 
 function EconomyTicketPrice(increase){
     const economyClassInput = document.getElementById("economy-class-input");
@@ -29,7 +36,9 @@ function EconomyTicketPrice(increase){
     document.getElementById("economy-class-price").innerHTML = "$" + economyTotalPrice;
     calculateSubTotal()
 }
+// economy ticket Price function end here
 
+// calculate sub total function start here
 
 function calculateSubTotal(){
     const firstClassInput = document.getElementById("first-class-input");
@@ -49,3 +58,5 @@ function calculateSubTotal(){
     const allTotalCost = subTotal + tax;
     document.getElementById("all-total").innerText = "$" + allTotalCost
 }
+
+// calculate sub total function end here
